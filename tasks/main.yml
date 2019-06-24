@@ -17,6 +17,8 @@
     mode: 0644
     validate: 'sshd -tf %s'
     backup: yes
+  notify:
+    - Reload sshd
 
 - name: Remove 10-help-text from login messages
   file:

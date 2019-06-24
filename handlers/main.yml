@@ -1,0 +1,6 @@
+---
+- name: Reload sshd
+  systemd:
+    name: sshd
+    state: reloaded
+  when: ( ansible_service_mgr == "systemd" )
